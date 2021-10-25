@@ -3,14 +3,14 @@
 ## Home Page
 
 ### HTML Elements
-- [ ] Text input for User name
-- [ ] Radio butons for User Frequent Fly info
+- [x] Text input for User name
+- [x] Radio butons for User Frequent Fly info
 
 ### Events
-- [ ] Form Submit
-    - [ ] Generate User data into an object (generateUser)
-    - [ ] Store User info into localStorage (setUser)
-    - [ ] redirect to map page
+- [x] Form Submit
+    - [x] Generate User data into an object (generateUser)
+    - [x] Store User info into localStorage (setUser)
+    - [x] redirect to map page
 
 ## Map Page
 
