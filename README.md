@@ -1,3 +1,78 @@
+# Adventure Quest Plan
+
+## Home Page
+
+### HTML Elements
+- [x] Text input for User name
+- [x] Radio butons for User Frequent Fly info
+
+### Events
+- [x] Form Submit
+    - [x] Generate User data into an object (generateUser)
+    - [x] Store User info into localStorage (setUser)
+    - [x] redirect to map page
+
+## Map Page
+
+### HTML Elements
+- [ ] list of links for each Quest (generated from quest data)
+    - [ ] link should not be clickable if user has completed it 
+    - [ ] link should contain URL search parameter with quest id
+
+### Events
+- [ ] on page load
+
+## Quest Detail Page
+
+### HTML Elements
+- [ ] Title
+- [ ] Description
+- [ ] Quest image
+- [ ] Quest choice (radio buttons)
+
+### Events 
+- [ ] on page load get quest ID and load quest page 
+- [ ] form submit
+    - [ ] update user data
+    - [ ] redirect to map page
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Alchemy Bootstrap Template
 
 ## Making a plan

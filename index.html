@@ -11,11 +11,35 @@
     <link rel="stylesheet" href="./styles/reset.css">
     <link rel="stylesheet" href="./styles/style.css">
     <link rel="stylesheet" href="./styles/home.css">
-    <title>Document</title>
+    <title>Adventure Quest</title>
 </head>
 
 <body>
-    
+    <form id="user-form">
+        <label for="name">
+            Your Adventurer Name: 
+            <input type="text" name="name">
+        </label>
+        <legend>Pick Your Frequent Flyer Status</legend>
+        <p id="avatars">
+            <label>
+                <input type="radio" name="status" required value="silver">
+                <img src="./assets/silver-icon.png" alt="Silver Icon">
+                Silver
+            </label>
+            <label>
+                <input type="radio" name="status" required value="gold">
+                <img src="./assets/gold-icon.jpeg" alt="Gold Icon">
+                Gold
+            </label>
+            <label>
+                <input type="radio" name="status" required value="diamond">
+                <img src="./assets/diamond-icon.png" alt="Diamond Icon">
+                Diamond
+            </label>
+        </p>
+        <button>Begin Your Trip</button>
+    </form>
 
     <script type="module" src="./app.js"></script>
 </body>
