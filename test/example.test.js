@@ -1,6 +1,6 @@
 // IMPORT MODULES under test here:
 // import { example } from '../example.js';
-import { generateUser, setUser, getUser } from '../utils.js';
+import { generateUser, setUser, getUser, score } from '../utils.js';
 
 const test = QUnit.test;
 
@@ -53,4 +53,29 @@ test('getUser should get the user info from localStorage', (expect) => {
     setUser(expected);
     const actual = getUser();
     expect.deepEqual(actual, expected);
+});
+
+test('score should update money, miles and completed', (expect) => {
+    const user = {
+        completed: {},
+        miles: 0,
+        money: 5000,
+        name: 'Andrew',
+        status: 'gold',
+    };
+    const choice = {
+        id: 'hide',
+        description: 'Hide from the drug lord',
+        result: `After hiding for a few hours you end up getting 
+        caught by the drug lord and imprisonned for being an outsider. 
+        You lose all your money but gain 1500mi.`,
+        miles: 1500,
+        money: -5000
+    };
+    const questId = 'africa';
+
+    score(choice, questId, user);
+    expect.equal(user.money, 0);
+    expect.equal(user.miles, 1500);
+    expect.equal(user.completed[questId], true);
 });

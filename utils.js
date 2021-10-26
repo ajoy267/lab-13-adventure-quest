@@ -17,3 +17,9 @@ export function getUser() {
     const userString = localStorage.getItem('USER');
     return JSON.parse(userString);
 }
+
+export function score(choice, questId, user) {
+    user.money += choice.money;
+    user.miles += choice.miles;
+    user.completed[questId] = true;
+}
