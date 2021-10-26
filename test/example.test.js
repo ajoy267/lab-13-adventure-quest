@@ -1,6 +1,6 @@
 // IMPORT MODULES under test here:
 // import { example } from '../example.js';
-import { generateUser, setUser } from '../utils.js';
+import { generateUser, setUser, getUser } from '../utils.js';
 
 const test = QUnit.test;
 
@@ -38,5 +38,19 @@ test('setUser should save to localStorage', (expect) => {
     };
     setUser(expected);
     const actual = JSON.parse(localStorage.getItem('USER'));
+    expect.deepEqual(actual, expected);
+});
+
+test('getUser should get the user info from localStorage', (expect) => {
+    localStorage.removeItem('USER');
+    const expected = {
+        completed: {},
+        miles: 0,
+        money: 5000,
+        name: 'Andrew',
+        status: 'gold',
+    };
+    setUser(expected);
+    const actual = getUser();
     expect.deepEqual(actual, expected);
 });
