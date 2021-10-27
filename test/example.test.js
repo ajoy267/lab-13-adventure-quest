@@ -1,6 +1,6 @@
 // IMPORT MODULES under test here:
 // import { example } from '../example.js';
-import { generateUser, setUser, getUser, score } from '../utils.js';
+import { generateUser, setUser, getUser, score, completedAllQuests } from '../utils.js';
 
 const test = QUnit.test;
 
@@ -78,4 +78,12 @@ test('score should update money, miles and completed', (expect) => {
     expect.equal(user.money, 0);
     expect.equal(user.miles, 1500);
     expect.equal(user.completed[questId], true);
+});
+
+test('completedAllQuests returns false if the user hasnt done it', (expect) => {
+    const user = {
+        completed: { unitedStates: true, europe: true },
+    };
+    const actual = completedAllQuests(user);
+    expect.equal(actual, false);
 });

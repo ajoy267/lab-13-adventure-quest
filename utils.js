@@ -1,3 +1,5 @@
+import quests from './data/quest-data.js';
+
 export function generateUser(formData) {
     return {
         completed: {},
@@ -22,4 +24,13 @@ export function score(choice, questId, user) {
     user.money += choice.money;
     user.miles += choice.miles;
     user.completed[questId] = true;
+}
+
+export function completedAllQuests(user){
+    for (let quest of quests){
+        if (!user.completed[quest.id]){
+            return false;
+        }
+    }
+    return true;
 }
