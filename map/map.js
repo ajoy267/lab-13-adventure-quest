@@ -26,6 +26,9 @@ function displayLink(quest) {
 function displaySpan(quest) {
     const span = document.createElement('span');
     span.textContent = quest.title;
+    span.classList.add('link');
+    span.style.top = quest.map.top;
+    span.style.left = quest.map.left;
 
     mapLinks.appendChild(span);
 }
