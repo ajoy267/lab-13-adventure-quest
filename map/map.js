@@ -1,8 +1,12 @@
 import quests from '../data/quest-data.js';
-import { getUser } from '../utils.js';
+import { getUser, completedAllQuests } from '../utils.js';
 
 const mapLinks = document.getElementById('map-links');
 const user = getUser();
+
+if (user.money <= 0 || completedAllQuests(user)) {
+    window.location.replace('../endgame');
+}
 
 for (let quest of quests) {
     if (user.completed[quest.id]) {
