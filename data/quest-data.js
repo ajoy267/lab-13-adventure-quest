@@ -5,7 +5,7 @@ const unitedStates = {
         top: '65%',
         left: '25%'
     },
-    image: '../assests/america.png',
+    image: 'america.png',
     description: `You fly to Texas only to realize you got on the wrong 
     flight to the US, you were suppose to fly to Las Vegas. What do 
     you do?`,
@@ -45,7 +45,7 @@ const europe = {
         top: '70%',
         left: '60%'
     },
-    image: '../assests/european-flag.png',
+    image: 'european-flag.png',
     description: `You're European tour begins with a journey to Belgium. 
     After a nice welcome from the Belgian people, you decided to go to the 
     neighboring country; The Netherlands. Once entering the Dutch country 
@@ -86,7 +86,7 @@ const africa = {
         top: '50%',
         left: '60%'
     },
-    image: '../assests/african-flag.png',
+    image: 'african-flag.png',
     description: `You have embarked on your African Tour and are 
     eager to learn about the unique culture that they have. Upon 
     visiting a small village, an African Drug Lord and his followers 

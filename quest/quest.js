@@ -8,24 +8,25 @@ const questData = findById(quests, params.get('id'));
 const title = document.getElementById('quest-title');
 title.textContent = questData.title;
 
-const img = document.getElementById('quest-image');
-img.src = `../assets/quest/${questData.image}`;
+const img = document.getElementById('quest-img');
+img.src = `../assets/${questData.image}`;
 
 const description = document.getElementById('quest-description');
 description.textContent = questData.description;
 
 const questChoices = document.getElementById('quest-choices');
-for (let choice of questData.choices) {
+
+for (let pick of questData.choices) {
     const label = document.createElement('label');
 
     const input = document.createElement('input');
     input.type = 'radio';
-    input.name = 'choice';
+    input.name = 'choices';
     input.required = true;
-    input.value = choice.id;
+    input.value = pick.id;
 
     const span = document.createElement('span');
-    span.textContent = choice.description;
+    span.textContent = pick.description;
     label.append(input, span);
     questChoices.append(label);
 }
@@ -37,11 +38,11 @@ questChoices.append(button);
 questChoices.addEventListener('submit', (e) => {
     e.preventDefault();
 
-    const selectedRadio = document.querySelector('input[type="radio":checked');
-    const choice = findById(questData.choices, selectedRadio.value);
+    const selectedChoice = document.querySelector('input[type="radio"]:checked');
+    const choice = findById(questData.choices, selectedChoice.value);
 
     const user = getUser();
-
+    
     score(choice, questData.id, user);
 
     setUser(user);

@@ -20,10 +20,10 @@ export function getUser() {
     return JSON.parse(userString);
 }
 
-export function score(choice, questId, user) {
-    user.money += choice.money;
-    user.miles += choice.miles;
-    user.completed[questId] = true;
+export function score(userChoice, questId, userObject) {
+    userObject.miles += userChoice.miles;
+    userObject.money += userChoice.money;
+    userObject.completed[questId] = true;
 }
 
 export function completedAllQuests(user){
