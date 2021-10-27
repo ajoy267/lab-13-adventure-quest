@@ -1,8 +1,14 @@
 import quests from '../data/quest-data.js';
-import { getUser } from '../utils.js';
+import { getUser, completedAllQuests, userProfile } from '../utils.js';
 
 const mapLinks = document.getElementById('map-links');
 const user = getUser();
+
+userProfile();
+
+if (user.money <= 0 || completedAllQuests(user)) {
+    window.location.replace('../endgame');
+}
 
 for (let quest of quests) {
     if (user.completed[quest.id]) {
@@ -16,6 +22,9 @@ function displayLink(quest) {
     const a = document.createElement('a');
     a.href = `../quest/?id=${quest.id}`;
     a.textContent = quest.title;
+    a.classList.add('link');
+    a.style.top = quest.map.top;
+    a.style.left = quest.map.left;
 
     mapLinks.appendChild(a);
 }
@@ -23,6 +32,9 @@ function displayLink(quest) {
 function displaySpan(quest) {
     const span = document.createElement('span');
     span.textContent = quest.title;
+    span.classList.add('link');
+    span.style.top = quest.map.top;
+    span.style.left = quest.map.left;
 
     mapLinks.appendChild(span);
 }

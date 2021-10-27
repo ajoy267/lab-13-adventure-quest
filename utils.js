@@ -26,9 +26,9 @@ export function score(userChoice, questId, userObject) {
     userObject.completed[questId] = true;
 }
 
-export function completedAllQuests(user){
+export function completedAllQuests(userObject){
     for (let quest of quests){
-        if (!user.completed[quest.id]){
+        if (!userObject.completed[quest.id]){
             return false;
         }
     }
@@ -41,4 +41,20 @@ export function findById(items, id){
             return item;
         }
     }
+}
+
+export function userProfile() {
+    const user = getUser();
+
+    const img = document.getElementById('user-image');
+    img.src = `../assets/${user.status}-icon.png`;
+
+    const name = document.getElementById('user-name');
+    name.textContent = user.name;
+
+    const miles = document.getElementById('user-miles');
+    miles.textContent = user.miles;
+
+    const money = document.getElementById('user-money');
+    money.textContent = user.money;
 }

@@ -1,9 +1,11 @@
 import quests from '../data/quest-data.js';
-import { findById, getUser, setUser, score } from '../utils.js';
+import { findById, getUser, setUser, score, userProfile } from '../utils.js';
 
 const params = new URLSearchParams(window.location.search);
 
 const questData = findById(quests, params.get('id'));
+
+userProfile();
 
 const title = document.getElementById('quest-title');
 title.textContent = questData.title;
@@ -61,4 +63,6 @@ questChoices.addEventListener('submit', (e) => {
 
     questResults.append(resultsP, backLink);
     questResults.classList.remove('hidden');
+
+    userProfile();
 });
