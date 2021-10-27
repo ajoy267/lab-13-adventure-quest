@@ -42,3 +42,19 @@ export function findById(items, id){
         }
     }
 }
+
+export function userProfile() {
+    const user = getUser();
+
+    const img = document.getElementById('user-image');
+    img.sr = `../assets/${user.status}.png`;
+
+    const name = document.getElementById('user-name');
+    name.textContent = user.name;
+
+    const miles = document.getElementById('user-miles');
+    miles.textContent = user.miles;
+
+    const money = document.getElementById('user-money');
+    money.textContent = user.money;
+}
