@@ -47,7 +47,7 @@ export function userProfile() {
     const user = getUser();
 
     const img = document.getElementById('user-image');
-    img.sr = `../assets/${user.status}.png`;
+    img.src = `../assets/${user.status}-icon.png`;
 
     const name = document.getElementById('user-name');
     name.textContent = user.name;
