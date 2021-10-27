@@ -6,10 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styles/reset.css">
     <link rel="stylesheet" href="../styles/endgame.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap" rel="stylesheet">
     <title>Game Over</title>
 </head>
 <body>
     <h1>Game Over!</h1>
+    <main>
+        <span class="user-image">Status: <img id="user-image"></span>
+        <div class="user-info">
+            <p>Name: <span id="user-name"></span></p>
+            <p>Miles: <span id="user-miles"></span></p>
+            <p>Money: $<span id="user-money"></span></p>
+        </div>
+    </main>
+    <button id="try-again">Play Again</button>
     <script src="./endgame.js" type="module"></script>
 </body>
 </html>
