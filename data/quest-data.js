@@ -2,8 +2,8 @@ const unitedStates = {
     id: 'us',
     title: 'Adventures to the US',
     map: {
-        top: '65%',
-        left: '25%'
+        top: '40%',
+        left: '12%'
     },
     image: 'america.png',
     description: `You fly to Texas only to realize you got on the wrong 
@@ -42,8 +42,8 @@ const europe = {
     id: 'europe',
     title: 'European Tour',
     map: {
-        top: '70%',
-        left: '60%'
+        top: '30%',
+        left: '50%'
     },
     image: 'european-flag.png',
     description: `You're European tour begins with a journey to Belgium. 
@@ -84,7 +84,7 @@ const africa = {
     title: 'African Tour',
     map: {
         top: '50%',
-        left: '60%'
+        left: '45%'
     },
     image: 'african-flag.png',
     description: `You have embarked on your African Tour and are 
