@@ -11,12 +11,15 @@
     <link rel="stylesheet" href="./styles/reset.css">
     <link rel="stylesheet" href="./styles/style.css">
     <link rel="stylesheet" href="./styles/home.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap" rel="stylesheet">
     <title>Adventure Quest</title>
 </head>
 
 <body>
     <form id="user-form">
-        <label for="name">
+        <label for="name" class="name">
             Your Adventurer Name: 
             <input type="text" name="name">
         </label>
@@ -25,17 +28,17 @@
             <label>
                 <input type="radio" name="status" required value="silver">
                 <img src="./assets/silver-icon.png" alt="Silver Icon">
-                Silver
+                <span>Silver</span>
             </label>
             <label>
                 <input type="radio" name="status" required value="gold">
                 <img src="./assets/gold-icon.jpeg" alt="Gold Icon">
-                Gold
+                <span>Gold</span>
             </label>
             <label>
                 <input type="radio" name="status" required value="diamond">
                 <img src="./assets/diamond-icon.png" alt="Diamond Icon">
-                Diamond
+                <span>Diamond</span>
             </label>
         </p>
         <button>Begin Your Trip</button>
