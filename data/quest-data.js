@@ -42,7 +42,7 @@ const europe = {
     id: 'europe',
     title: 'European Tour',
     map: {
-        top: '30%',
+        top: '40%',
         left: '50%'
     },
     image: 'european-flag.png',
